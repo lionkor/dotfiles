@@ -1,0 +1,3 @@
+[submodule "src/lk_short_path"]
+	path = src/lk_short_path
+	url = https://github.com/lionkor/lk_short_path
