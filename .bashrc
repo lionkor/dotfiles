@@ -103,4 +103,6 @@ function do_title_thing() {
     set_xterm_title $BASH_COMMAND;
 }
 
+set -o history -o histexpand
+
 trap do_title_thing DEBUG
