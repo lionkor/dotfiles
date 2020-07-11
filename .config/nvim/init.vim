@@ -37,9 +37,6 @@ call plug#end()
 
 call neomake#configure#automake('nrwi', 500)
 
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab smartindent
-set number
-set relativenumber
 if executable('clangd')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'clangd',
@@ -136,7 +133,6 @@ colorscheme sitruuna
 
 set nowrap
 
-set mouse=a
 
 let g:ctrlp_working_path_mode = 'ra'
 
@@ -146,3 +142,19 @@ let g:ctrlp_user_command = 'find %s -type f \( ! -iname "*.o" ! -path ".git/*" !
 " let g:cpp_member_variable_highlight = 1
 " let g:cpp_class_decl_highlight = 1
 " let g:cpp_posix_standard = 1
+
+set mouse=a
+set clipboard+=unnamedplus
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
+set incsearch ignorecase smartcase hlsearch
+set number 
+set splitright
+set backspace=indent,eol,start
+set undofile
+set undodir=/tmp
+set nocursorline
+set nocursorcolumn
+set lazyredraw
+set redrawtime=10000
+set synmaxcol=180
+

@@ -38,9 +38,8 @@ alias vim="nvim"
 #alias qtc="(qtcreator . &>/dev/null &)"
 
 alias rm="rm -v"
-
-alias cdfh="cd ~/Documents/FH"
-alias cdas3="cd ~/src/antsim3"
+alias cp="cp -v"
+alias mv="mv -v"
 
 qtc() {
     (qtcreator "$1" &>/dev/null &)
@@ -99,3 +98,9 @@ function vtmp() {
     echo "edited $filename";
     nvim $filename;
 }
+
+function do_title_thing() {
+    set_xterm_title $BASH_COMMAND;
+}
+
+trap do_title_thing DEBUG
