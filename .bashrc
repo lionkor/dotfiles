@@ -106,3 +106,4 @@ function do_title_thing() {
 set -o history -o histexpand
 
 trap do_title_thing DEBUG
+
